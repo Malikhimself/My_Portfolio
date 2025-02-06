@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#line {
+    border: 1px solid #ccc;
+    width: 200px;
+    margin-top: 10px;
+}
+
+/* @media (max-width: 640px) {
+    svg {
+        display: block;
+    }
+} */
