@@ -18,15 +18,20 @@
             }
           }
         }
-      </script>
+    </script>
+    <!-- <script>
+        function toggleMenu() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        }
+    </script> -->
 </head>
 <body>
-    <section class="bg-[url(Images/5184015.jpg)] bg-cover h-[110vh]">
+    <section class="bg-[url(Images/5184015.jpg)] bg-cover h-[110vh]" id="hero-section">
         <header class="p-6 text-white">
             <nav class="flex justify-between items-center font-mono">
                 <h1 class="font-bold text-lg">My Portfolio</h1>
     
-                <ul class="hidden md:flex space-x-16 tracking-wide">
+                <ul id="mobile-menu" class="hidden md:flex space-x-16 tracking-wide">
                     <li><a href="#" target="_blank" class="text-[#CEB772] underline underline-offset-8 decoration-white">HOME</a></li>
                     <li><a href="#" target="_blank" class="hover:underline underline-offset-8 decoration-white hover:text-[#CEB772]">ABOUT</a></li>
                     <li><a href="#" target="_blank" class="hover:underline underline-offset-8 decoration-white hover:text-[#CEB772]">PROJECTS</a></li>
@@ -40,17 +45,25 @@
                     </a>
                 </button>
 
-                <svg
-                    class="w-10 lg:hidden md:hidden xl:hidden 2xl:hidden"
-                     xmlns="http://www.w3.org/2000/svg" 
-                    fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
+                <button onclick="toggleMenu()" class="w-10 lg:hidden md:hidden xl:hidden 2xl:hidden text-white">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg" 
+                        fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+
+                <!-- <ul id="mobile-menu" class="hidden absolute left-0 top-16 w-full bg-black text-white flex flex-col items-center space-y-4 py-6 md:hidden">
+                    <li><a href="#" class="text-[#CEB772]">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">PROJECTS</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul> -->
                   
             </nav>
         </header>
     
-        <section class="container mx-auto mt-10 px-6 md:px-12 lg:px-24 flex items-center justify-around">
+        <section class="container mx-auto mt-6 px-6 md:px-12 lg:px-24 flex items-center justify-around">
             <!-- Left Section -->
             <div class="md:w-1/2">
                 <p class="text-white text-md mb-2">Currently Available For Freelance</p>
@@ -83,7 +96,7 @@
             </div>
     
             <!-- Right Section -->
-             <div class="border-4 border-[#CEB772] rounded-full">
+             <div class="border-4 border-[#CEB772] rounded-full" id="profile-image">
                 <img src="Images/WhatsApp_Image_2024-12-28_at_14.51.46-removebg-preview.png" alt="Abdulmalik Bisiriyu" class="rounded-full">
              </div>
         </section>
@@ -311,7 +324,7 @@
             <h2 class="text-white text-6xl font-bold mb-10">Let's Start</h2>
 
             <div class="flex justify-around items-center">
-                <a href="" class="underline underline-offset-8 decoration-white text-white text-lg">
+                <a href="" class="underline underline-offset-8 decoration-white text-white text-lg hover:text-gray-200 hover:decoration-gray-200">
                     <i class="fa-solid fa-envelope"></i>
                     malik.himself0@gmail.com
                 </a>
@@ -322,7 +335,7 @@
                     </a>
                 </button>
 
-                <a href="" class="underline underline-offset-8 decoration-white text-white text-lg">
+                <a href="" class="underline underline-offset-8 decoration-white text-white text-lg hover:text-gray-200 hover:decoration-gray-200">
                     <i class="fa-solid fa-phone"></i>
                     +234 903 798 3588
                 </a>
@@ -331,16 +344,16 @@
 
         <div class="mt-10 text-gray-300">
             <ul class="flex gap-10 items-center justify-center">
-                <a href="" class="w-[35px] h-[35px] border border-[#CEB772] rounded-full place-items-center p-1">
+                <a href="" class="w-[35px] h-[35px] border border-[#CEB772] rounded-full place-items-center p-1 hover:text-white">
                     <li><i class="fa-brands fa-x-twitter m-auto"></i></li>
                 </a>
-                <a href="" class="w-[35px] h-[35px] border border-[#CEB772] rounded-full place-items-center p-1">
+                <a href="" class="w-[35px] h-[35px] border border-[#CEB772] rounded-full place-items-center p-1 hover:text-white">
                     <li><i class="fa-brands fa-instagram"></i></li>
                 </a>
-                <a href="" class="w-[35px] h-[35px] border border-[#CEB772] rounded-full place-items-center p-1">
+                <a href="" class="w-[35px] h-[35px] border border-[#CEB772] rounded-full place-items-center p-1 hover:text-white">
                     <li><i class="fa-brands fa-linkedin"></i></li>
                 </a>
-                <a href="" class="w-[35px] h-[35px] border border-[#CEB772] rounded-full place-items-center p-1">
+                <a href="" class="w-[35px] h-[35px] border border-[#CEB772] rounded-full place-items-center p-1 hover:text-white">
                     <li><i class="fa-brands fa-github"></i></li>
                 </a>
             </ul>

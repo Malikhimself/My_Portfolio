@@ -12,3 +12,42 @@
     margin-top: 10px;
 }
 
+@media (max-width: 391px) {
+    #hero-section {
+        min-height: 200vh;
+    }
+
+    #mobile-menu {
+        display: none;
+        /* display: flex; */
+        flex-direction: column;
+        align-items: center;
+        padding-block: 12px;
+        position: absolute;
+        left: 0;
+        top: 16px;
+        width: 100vw;
+        background-color: black;
+        color: white;
+
+    }
+
+    #line {
+        width: 90vw;
+    }
+
+    #profile-image {
+       display: block;
+       border-radius: 0px;
+       margin-bottom: 20px; 
+    }
+
+    #profile-image img {
+        border-radius: 0px;
+    }
+
+    #hero-section footer {
+        width: 100vw;
+
+    }
+}
