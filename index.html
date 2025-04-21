@@ -25,45 +25,44 @@
         }
     </script> -->
 </head>
-<body>
-    <section class="bg-[url(Images/5184015.jpg)] bg-cover h-[110vh]" id="hero-section">
-        <header class="p-6 text-white">
-            <nav class="flex justify-between items-center font-mono">
-                <h1 class="font-bold text-lg">My Portfolio</h1>
-    
-                <ul id="mobile-menu" class="hidden md:flex space-x-16 tracking-wide">
-                    <li><a href="#" target="_blank" class="text-[#CEB772] underline underline-offset-8 decoration-white">HOME</a></li>
-                    <li><a href="#" target="_blank" class="hover:underline underline-offset-8 decoration-white hover:text-[#CEB772]">ABOUT</a></li>
-                    <li><a href="#" target="_blank" class="hover:underline underline-offset-8 decoration-white hover:text-[#CEB772]">PROJECTS</a></li>
-                    <li><a href="#" target="_blank" class="hover:underline underline-offset-8 decoration-white hover:text-[#CEB772]">CONTACT</a></li>
-                </ul>
-    
-                <button class="border border-[#CEB772] px-4 py-2 rounded hover:bg-[#CEB772] hover:text-black">
-                    <a href="#" target="_blank">
-                        <i class="fa-regular fa-paper-plane"></i>
-                        Let's Talk
-                    </a>
-                </button>
+<body class="bg-">
+    <header class="p-6 text-white sticky top-0 bottom-0 z-1000 bg-[#222222]">
+        <nav class="flex justify-between items-center font-mono">
+            <h1 class="font-bold text-lg">My Portfolio</h1>
 
-                <button onclick="toggleMenu()" class="w-10 lg:hidden md:hidden xl:hidden 2xl:hidden text-white">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg" 
-                        fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                </button>
+            <ul id="mobile-menu" class="hidden md:flex space-x-16 tracking-wide">
+                <li><a href="#hero-section" class="hover:underline underline-offset-8 transition-all delay-150 ease-in-out decoration-white hover:text-[#CEB772]">HOME</a></li>
+                <li><a href="#about-section" class="hover:underline underline-offset-8 decoration-white hover:text-[#CEB772]">ABOUT</a></li>
+                <li><a href="#" class="hover:underline underline-offset-8 decoration-white hover:text-[#CEB772]">PROJECTS</a></li>
+                <li><a href="#" class="hover:underline underline-offset-8 decoration-white hover:text-[#CEB772]">CONTACT</a></li>
+            </ul>
 
-                <!-- <ul id="mobile-menu" class="hidden absolute left-0 top-16 w-full bg-black text-white flex flex-col items-center space-y-4 py-6 md:hidden">
-                    <li><a href="#" class="text-[#CEB772]">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">PROJECTS</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                </ul> -->
-                  
-            </nav>
-        </header>
-    
-        <section class="container mx-auto mt-6 px-6 md:px-12 lg:px-24 flex items-center justify-around">
+            <button class="border border-[#CEB772] px-4 py-2 rounded hover:bg-[#CEB772] hover:text-black">
+                <a href="#" target="_blank">
+                    <i class="fa-regular fa-paper-plane"></i>
+                    Let's Talk
+                </a>
+            </button>
+
+            <button onclick="toggleMenu()" class="w-10 lg:hidden md:hidden xl:hidden 2xl:hidden text-white">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+
+            <!-- <ul id="mobile-menu" class="hidden absolute left-0 top-16 w-full bg-black text-white flex flex-col items-center space-y-4 py-6 md:hidden">
+                <li><a href="#" class="text-[#CEB772]">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">PROJECTS</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul> -->                  
+        </nav>
+    </header>
+
+    <section class="bg-[url(Images/5184015.jpg)] bg-cover p-6 -mt-7" id="hero-section">   
+        <section class="container mx-auto mt-6 px-2 md:px-12 lg:px-24 flex items-center justify-around">
             <!-- Left Section -->
             <div class="md:w-1/2">
                 <p class="text-white text-md mb-2">Currently Available For Freelance</p>
@@ -74,7 +73,7 @@
     
                 <h6 class="text-3xl text-white mt-4 mb-4">Hi, I'm Abdulmalik Bisiriyu</h6>
     
-                <h1 class="text-4xl text-[#CEB772] font-bold mb-6">A UI Designer & Front-End Web Developer</h1>
+                <h1 class="role text-4xl text-[#CEB772] font-bold mb-6" id="role"></h1>
     
                 <button class="bg-white border-2 border-[#CEB772] px-6 py-3 rounded-md hover:bg-[#CEB772] hover:text-black">
                     <a href="#">
@@ -83,7 +82,7 @@
                     </a>
                 </button>
     
-                <div class="flex items-center mt-6">
+                <!-- <div class="flex items-center mt-6">
                     <div class="flex -space-x-2">
                         <img src="Images/brooke-cagle-oTweoxMKdkA-unsplash.jpg" alt="Customer 1" class="w-10 h-10 rounded-full border-2 border-black">
                         <img src="Images/joshua-tsu-6LkwAXWgYO0-unsplash.jpg" alt="Customer 2" class="w-10 h-10 rounded-full border-2 border-black">
@@ -92,7 +91,7 @@
                     </div>
     
                     <p class="text-white text-sm">10k+ Worldwide Customers</p>
-                </div>
+                </div> -->
             </div>
     
             <!-- Right Section -->
@@ -102,7 +101,7 @@
         </section>
 
         <!-- Footer section -->
-        <footer class="bg-gray-900 border-2 border-[#CEB772] p-6 w-[75%] m-auto mt-8 text-center md:px-12 rounded-2xl">
+        <footer class="bg-gray-900 border-2 border-[#CEB772] p-6 w-[80%] m-auto mt-6 text-center md:px-12 rounded-2xl">
             <div class="flex justify-around space-x-8">
                 <a href="#" class="flex gap-3 text-slate-400 hover:text-[#CEB772]"><i class="fa-brands fa-dribbble text-4xl"></i><p class="text-xl w-22 text-left">Dribble <br> <span class="text-sm">See My Work</span></p></a>
                 <a href="#" class="flex gap-3 text-slate-400 hover:text-[#CEB772]"><i class="fa-brands fa-behance text-4xl"></i><p class="text-xl w-22 text-left">Behance <br> <span class="text-sm">See My Work</span></p></a>
@@ -112,7 +111,7 @@
         </footer>
     </section>
 
-    <div class="bg-[#1a1a1a] min-h-[110vh]">
+    <div class="bg-[#1a1a1a] min-h-[110vh]" id="about-section">
         <header class="text-white p-10">
             <div class="text-center">
                 <span class="border border-[#CEB772] px-4 py-2 rounded-md">About Me</span>
@@ -122,7 +121,7 @@
                 </p>
             </div>
 
-            <nav class="bg-[#121212] w-[32vw] p-2 m-auto mt-10 rounded-md">
+            <nav class="bg-[#121212] w-[35%] p-2 m-auto mt-10 rounded-md">
                 <ul class="flex items-center gap-8">
                     <a href="" class="bg-[#CEB772] text-black font-medium text-lg px-4 py-2 rounded-md">
                         <li>About</li>
@@ -203,118 +202,51 @@
         </header>
     </div>
 
-    <div class="bg-black min-h-[90vh] pt-12">
+    <div class="bg-black py-12">
         <div class="text-center text-white">
-            <span class="border border-[#CEB772] px-4 py-2 rounded-md">Services</span>
+            <span class="border border-[#CEB772] px-4 py-2 rounded-md">Skills</span>
             <h2 class="font-bold text-3xl mt-4">My Special Services</h2>
         </div>
 
-        <div class="w-[90vw] m-auto">
-            <div class="flex items-center justify-between border-b border-gray-700 pb-4 mt-16">
-                <div class="w-[25vw] flex items-center justify-between">
-                    <p class="text-gray-200 text-2xl">01.</p>
-                    <h3 class="text-5xl text-white font-bold">UI Design</h3>
+        <div class="w-[60vw] mt-5 m-auto" id="skills">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 m-auto">
+                <div id="skills-card" class="text-white text-center w-36 p-6 rounded-lg bg-[#222222] space-y-3 hover:scale-105">
+                    <i class="fa-brands fa-html5 fa-2xl" style="color: #FFD43B;"></i>
+                    <h2 class="text-lg font-bold">HTML</h2>
+                    <span class="text-[#FFD43B] font-bold text-sm">Intermediate</span>
                 </div>
-                <button class="border-2 border-[#CEB772] rounded-full p-3 text-white hover:bg-[#CEB772] hover:text-black">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                    </svg>                      
-                </button>
-            </div>
-
-            <div class="flex items-center justify-between border-b border-gray-700 pb-4 mt-16">
-                <div class="w-[40vw] flex items-center justify-between">
-                    <p class="text-gray-200 text-2xl">02.</p>
-                    <h3 class="text-5xl text-white font-bold">Mobile Apps Design</h3>
+    
+                <div id="skills-card" class="text-white text-center w-36 p-6 rounded-lg bg-[#222222] space-y-3 hover:scale-105">
+                    <i class="fa-brands fa-css3 fa-2xl" style="color: #FFD43B;"></i>
+                    <h2 class="text-lg font-bold">CSS</h2>
+                    <span class="text-[#FFD43B] font-bold text-sm">Intermediate</span>
                 </div>
-                <button class="border-2 border-[#CEB772] rounded-full p-3 text-white hover:bg-[#CEB772] hover:text-black">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                    </svg>                      
-                </button>
-            </div>
-
-            <div class="flex items-center justify-between border-b border-gray-700 pb-4 mt-16">
-                <div class="w-[52vw] flex items-center justify-between">
-                    <p class="text-gray-200 text-2xl">03.</p>
-                    <h3 class="text-5xl text-white font-bold">Frontend Web Development</h3>
+    
+                <div id="skills-card" class="text-white text-center w-36 p-6 rounded-lg bg-[#222222] space-y-3 hover:scale-105">
+                    <i class="fa-brands fa-js fa-2xl" style="color: #FFD43B;"></i>
+                    <h2 class="text-lg font-bold">JavaScript</h2>
+                    <span class="text-[#FFD43B] font-bold text-sm">Beginner</span>
                 </div>
-                <button class="border-2 border-[#CEB772] rounded-full p-3 text-white hover:bg-[#CEB772] hover:text-black">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                    </svg>                      
-                </button>
+    
+                <div id="skills-card" class="text-white text-center w-36 p-6 rounded-lg bg-[#222222] space-y-3 hover:scale-105">
+                    <i class="fa-brands fa-figma fa-2xl" style="color: #FFD43B;"></i>
+                    <h2 class="text-lg font-bold">Figma</h2>
+                    <span class="text-[#FFD43B] font-bold text-sm">Intermediate</span>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="bg-[#1a1a1a] min-h-[80vh] pt-12">
         <div class="text-center text-white">
-            <span class="border border-[#CEB772] px-4 py-2 rounded-md">Testimonial</span>
-            <h2 class="font-bold text-3xl mt-4">What Some Of My CLients Say</h2>
+            <span class="border border-[#CEB772] px-4 py-2 rounded-md">Projects</span>
+            <h2 class="font-bold text-3xl mt-4">See my projects!</h2>
         </div>
 
         <div class="flex justify-around w-[95vw] m-auto mt-14">
-            <figure class="text-white w-[25vw] mt-16">
-                <p>
-                    <blockquote class="text-justify text-slate-200 mb-2">
-                        "Abdulmalik transformed our e-commerce platform with a sleek, user-friendly design. 
-                        Their expertise in UI/UX and front-end development made our website more engaging and significantly improved customer retention."
-                    </blockquote>
-                </p>
-                <div class="flex items-center">
-                    <div class="w-[5vw]">
-                        <img class="w-16 h-16 p-2 rounded-full" src="Images/linkedin-sales-solutions-pAtA8xe_iVM-unsplash.jpg" alt="John D.">
-                    </div>
-                    <figcaption>
-                        <p class="text-slate-100 text-lg">John D.</p>
-                        <span class="text-[#CEB772] text-sm">CEO, GreenTech Solutions</span>
-                    </figcaption>
-                </div>
-            </figure>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-            <figure class="text-white w-[25vw]">
-                <p>
-                    <blockquote class="text-justify text-slate-200 mb-2">
-                        "Abdulmalik transformed our e-commerce platform with a sleek, user-friendly design. 
-                        Their expertise in UI/UX and front-end development made our website more engaging and significantly improved customer retention."
-                    </blockquote>
-                </p>
-                <div class="flex items-center">
-                    <div class="w-[5vw]">
-                        <img class="w-16 h-16 p-2 rounded-full" src="Images/linkedin-sales-solutions-pAtA8xe_iVM-unsplash.jpg" alt="John D.">
-                    </div>
-                    <figcaption>
-                        <p class="text-slate-100 text-lg">John D.</p>
-                        <span class="text-[#CEB772] text-sm">CEO, GreenTech Solutions</span>
-                    </figcaption>
-                </div>
-            </figure>
-
-            <figure class="text-white w-[25vw] mt-16">
-                <p>
-                    <blockquote class="text-justify text-slate-200 mb-2">
-                        "Abdulmalik transformed our e-commerce platform with a sleek, user-friendly design. 
-                        Their expertise in UI/UX and front-end development made our website more engaging and significantly improved customer retention."
-                    </blockquote>
-                </p>
-                <div class="flex items-center">
-                    <div class="w-[5vw]">
-                        <img class="w-16 h-16 p-2 rounded-full" src="Images/linkedin-sales-solutions-pAtA8xe_iVM-unsplash.jpg" alt="John D.">
-                    </div>
-                    <figcaption>
-                        <p class="text-slate-100 text-lg">John D.</p>
-                        <span class="text-[#CEB772] text-sm">CEO, GreenTech Solutions</span>
-                    </figcaption>
-                </div>
-            </figure>
-        </div>
-
-        <div class="flex justify-between w-[7vw] m-auto mt-6">
-            <span class="border border-[#CEB772] rounded-full p-2 cursor-pointer hover:bg-[#CEB772]"></span>
-            <span class="border border-[#CEB772] bg-[#CEB772] rounded-full p-2 cursor-pointer"></span>
-            <span class="border border-[#CEB772] rounded-full p-2 cursor-pointer hover:bg-[#CEB772]"></span>
-            <span class="border border-[#CEB772] rounded-full p-2 cursor-pointer hover:bg-[#CEB772]"></span>
+            </div>
         </div>
     </div>
 
@@ -359,5 +291,7 @@
             </ul>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

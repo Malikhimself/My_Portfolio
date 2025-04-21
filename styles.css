@@ -1,15 +1,41 @@
 @import "tailwindcss";
 
+@plugin "tailwindcss-motion";
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+.role {
+    overflow: hidden;
+    animation: typing 2s steps(20, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { clip-path: inset(0 100% 0 0); }
+    to { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes blink {
+50% { border-color: transparent; }
+}
+
 #line {
     border: 1px solid #ccc;
     width: 200px;
     margin-top: 10px;
+}
+
+#skills-card {
+    box-shadow: 0 2px 0 rgba(206, 183, 114, 1.0);
+}
+
+#skills-card:hover {
+    background-color: black;
+    box-shadow: none;
+    transition: all 0.3s ease;
 }
 
 @media (max-width: 391px) {
