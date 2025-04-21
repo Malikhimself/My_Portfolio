@@ -8,18 +8,20 @@
     box-sizing: border-box;
 }
 
-.role {
+.typewriter {
+    white-space: nowrap;
     overflow: hidden;
-    animation: typing 2s steps(20, end), blink 0.75s step-end infinite;
 }
 
-@keyframes typing {
-    from { clip-path: inset(0 100% 0 0); }
-    to { clip-path: inset(0 0 0 0); }
+.cursor {
+    display: inline-block;
+    color: #CEB772;
+    animation: blinkCursor 0.8s steps(1) infinite;
+    margin-left: 2px;
 }
 
-@keyframes blink {
-50% { border-color: transparent; }
+@keyframes blinkCursor {
+    50% { opacity: 0; }
 }
 
 #line {
