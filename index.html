@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -28,23 +30,24 @@
 <body class="bg-">
     <header class="p-6 text-white sticky top-0 bottom-0 z-1000 bg-[#222222]">
         <nav class="flex justify-between items-center font-mono">
-            <h1 class="font-bold text-lg">My Portfolio</h1>
+            <h1 class="font-bold text-lg text-[#CEB772]">Malik.himself</h1>
 
-            <ul id="mobile-menu" class="hidden md:flex space-x-16 tracking-wide">
-                <li><a href="#hero-section" class="hover:underline underline-offset-8 transition-all delay-150 ease-in-out decoration-white hover:text-[#CEB772]">HOME</a></li>
-                <li><a href="#about-section" class="hover:underline underline-offset-8 decoration-white hover:text-[#CEB772]">ABOUT</a></li>
-                <li><a href="#" class="hover:underline underline-offset-8 decoration-white hover:text-[#CEB772]">PROJECTS</a></li>
-                <li><a href="#" class="hover:underline underline-offset-8 decoration-white hover:text-[#CEB772]">CONTACT</a></li>
+            <ul id="mobile-menu" class="hidden lg:flex space-x-16 tracking-wide">
+                <li><a href="#hero-section" class="hover:underline underline-offset-8 transition-all delay-100 ease-in-out decoration-white hover:text-[#CEB772]">HOME</a></li>
+                <li><a href="#about-section" class="hover:underline underline-offset-8 transition-all delay-100 ease-in-out decoration-white hover:text-[#CEB772]">ABOUT</a></li>
+                <li><a href="#skills-section" class="hover:underline underline-offset-8 transition-all delay-100 ease-in-out decoration-white hover:text-[#CEB772]">SKILLS</a></li>
+                <li><a href="#project-section" class="hover:underline underline-offset-8 transition-all delay-100 ease-in-out decoration-white hover:text-[#CEB772]">PROJECTS</a></li>
+                <li><a href="#contact-section" class="hover:underline underline-offset-8 transition-all delay-100 ease-in-out decoration-white hover:text-[#CEB772]">CONTACT</a></li>
             </ul>
 
-            <button class="border border-[#CEB772] px-4 py-2 rounded hover:bg-[#CEB772] hover:text-black">
+            <button class="hidden lg:block border border-[#CEB772] px-4 py-2 rounded hover:bg-[#CEB772] hover:text-black">
                 <a href="#" target="_blank">
                     <i class="fa-regular fa-paper-plane"></i>
                     Let's Talk
                 </a>
             </button>
 
-            <button onclick="toggleMenu()" class="w-10 lg:hidden md:hidden xl:hidden 2xl:hidden text-white">
+            <button onclick="toggleMenu()" class="w-10 lg:hidden text-white">
                 <svg
                     xmlns="http://www.w3.org/2000/svg" 
                     fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -62,12 +65,12 @@
     </header>
 
     <section class="bg-[url(Images/5184015.jpg)] bg-cover p-6 -mt-7" id="hero-section">   
-        <section class="container mx-auto mt-6 px-2 md:px-12 lg:px-24 flex items-center justify-around">
+        <section class="container mx-auto mt-6 px-4 md:px-2 lg:px-24 flex flex-col-reverse text-center md:text-left md:flex-row items-center md:justify-center lg:justify-around">
             <!-- Left Section -->
-            <div class="md:w-1/2">
-                <p class="text-white text-md mb-2">Currently Available For Freelance</p>
+            <div class="md:w-1/2 text-center md:text-left">
+                <p class="text-white text-md mb-2 mt-4 lg:mt-0">Currently Available For Freelance</p>
     
-                <p class="text-white text-md flex items-center">Worldwide <span class="ml-2 text-lime-500">&#10140;</span></p>
+                <p class="text-white text-md">Worldwide <span class="ml-2 text-lime-500">&#10140;</span></p>
     
                 <div id="line"></div>
     
@@ -103,27 +106,27 @@
         </section>
 
         <!-- Footer section -->
-        <footer class="bg-gray-900 border-2 border-[#CEB772] p-6 w-[80%] m-auto mt-6 text-center md:px-12 rounded-2xl">
-            <div class="flex justify-around space-x-8">
-                <a href="#" class="flex gap-3 text-slate-400 hover:text-[#CEB772]"><i class="fa-brands fa-dribbble text-4xl"></i><p class="text-xl w-22 text-left">Dribble <br> <span class="text-sm">See My Work</span></p></a>
-                <a href="#" class="flex gap-3 text-slate-400 hover:text-[#CEB772]"><i class="fa-brands fa-behance text-4xl"></i><p class="text-xl w-22 text-left">Behance <br> <span class="text-sm">See My Work</span></p></a>
-                <a href="#" class="flex gap-3 text-slate-400 hover:text-[#CEB772]"><i class="fa-brands fa-github text-4xl"></i><p class="text-xl w-22 text-left">Github <br> <span class="text-sm">See My Work</span></p></a>
-                <a href="#" class="flex gap-3 text-slate-400 hover:text-[#CEB772]"><i class="fa-brands fa-linkedin-in text-4xl"></i><p class="text-xl w-22 text-left">Linkedin <br> <span class="text-sm">See My Work</span></p></a>
+        <footer class="bg-gray-900 border-2 border-[#CEB772] p-6 w-[70%] lg:w-[80%] m-auto mt-6 text-center md:px-12 rounded-2xl">
+            <div class="flex flex-col space-y-4 md:grid grid-cols-2 md:m-auto lg:flex-row justify-around items-center lg:items-start lg:space-x-8 lg:space-y-0 m-auto">
+                <a href="https://dribbble.com/This_is_Malik" class="flex gap-3 text-slate-400 hover:text-[#CEB772]"><i class="fa-brands fa-dribbble text-4xl"></i><p class="text-xl w-22 text-left">Dribbble <br> <span class="text-sm">See My Work</span></p></a>
+                <a href="https://www.behance.net/bisiriyabdulma" class="flex gap-3 text-slate-400 hover:text-[#CEB772]"><i class="fa-brands fa-behance text-4xl"></i><p class="text-xl w-22 text-left">Behance <br> <span class="text-sm">See My Work</span></p></a>
+                <a href="https://github.com/Malikhimself" class="flex gap-3 text-slate-400 hover:text-[#CEB772]"><i class="fa-brands fa-github text-4xl"></i><p class="text-xl w-22 text-left">Github <br> <span class="text-sm">See My Work</span></p></a>
+                <a href="https://www.linkedin.com/in/abdulmalik-bisiriyu-6639662a3/" class="flex gap-3 text-slate-400 hover:text-[#CEB772]"><i class="fa-brands fa-linkedin-in text-4xl"></i><p class="text-xl w-22 text-left">Linkedin <br> <span class="text-sm">See My Work</span></p></a>
             </div>
         </footer>
     </section>
 
-    <div class="bg-[#1a1a1a] min-h-[110vh]" id="about-section">
+    <div class="bg-[#1a1a1a] min-h-auto" id="about-section">
         <header class="text-white p-10">
-            <div class="text-center">
-                <span class="border border-[#CEB772] px-4 py-2 rounded-md">About Me</span>
-                <h2 class="font-bold text-3xl mt-4">Explore The Creativity & More</h2>
-                <p class="w-[70vw] tracking-wider m-auto mt-4 text-xl/snug">Welcome to my digital space! I am <span class="text-[#CEB772] font-medium">Abdulmalik Bisiriyu</span>, a UI/UX Designer and Front-End Web Developer with a deep passion for creating intuitive, responsive, and visually appealing web applications.
+            <div class="text-center m-5">
+                <span class="border border-[#CEB772] px-4 py-2 rounded-md ">About Me</span>
+                <h2 class="font-bold text-3xl mt-8">Explore The Creativity & More</h2>
+                <p class="w-[70vw] tracking-wider m-auto mt-4 text-xl/snug">Welcome to my digital space! I am <span class="text-[#CEB772] font-medium">Abdulmalik Bisiriyu, a UI Designer and Frontend Developer</span> with a deep passion for creating intuitive, responsive, and visually appealing web applications.
                     I'm always open to new opportunities, collaborations and conversations. Whether you have a project in mind, feel free to share. Let's create something extraordinary together!
                 </p>
             </div>
 
-            <nav class="bg-[#121212] w-[35%] p-2 m-auto mt-10 rounded-md">
+            <!-- <nav class="hidden lg:block bg-[#121212] w-[35%] p-2 m-auto mt-10 rounded-md">
                 <ul class="flex items-center gap-8">
                     <a href="" class="bg-[#CEB772] text-black font-medium text-lg px-4 py-2 rounded-md">
                         <li>About</li>
@@ -141,21 +144,21 @@
                         <li>Skills</li>
                     </a>
                 </ul>
-            </nav>
+            </nav> -->
 
             <div class="mt-10">
-                <div class="bg-[#212121] flex justify-center items-center min-h-[50vh] w-[75vw] m-auto p-6 gap-6">
+                <div class="bg-[#212121] flex flex-col lg:flex-row justify-center items-center min-h-[50vh] w-[90%] lg:w-[75vw] m-auto p-6 gap-6 rounded-lg">
                     <div class="w-[40vw]">
                         <img src="./Images/Malik.himself 1.jpeg" alt="">
                     </div>
 
-                    <div class="w-[60vw]">
+                    <div class="flex flex-col items-center justify-center lg:block lg:w-[60vw]">
                         <h2 class="text-3xl font-medium mb-4">Personal Info</h2>
-                        <p>With a few years experience as a professional Web developer, I have acquired the skills and knowledge necessary to make 
+                        <p class="text-center lg:text-left">With a few years experience as a professional Web developer, I have acquired the skills and knowledge necessary to make 
                             your project a success. I enjoy every step of the design & development process, from the discussion to collaboration.
                         </p>
 
-                        <div class="grid grid-cols-2 gap-4 mt-6">
+                        <div class="flex flex-col lg:grid grid-cols-2 gap-4 mt-6">
                             <div class="bg-[#1d1d1d] p-6 rounded-lg">
                                 <span class="text-gray-400 text-sm">Email</span>
                                 <a href="#">
@@ -179,19 +182,19 @@
                                 <span class="text-gray-400 text-sm">Socials</span>
                                 <div>
                                     <ul class="flex gap-2">
-                                        <a href="#">
+                                        <a href="#" class="hover:text-[#CEB772]">
                                             <li><i class="fa-brands fa-dribbble"></i></li>
                                         </a>
-                                        <a href="#">
+                                        <a href="#" class="hover:text-[#CEB772]">
                                             <li><i class="fa-brands fa-behance"></i></li>
                                         </a>
-                                        <a href="#">
+                                        <a href="#" class="hover:text-[#CEB772]">
                                             <li><i class="fa-brands fa-instagram"></i></li>
                                         </a>
-                                        <a href="#">
+                                        <a href="#" class="hover:text-[#CEB772]">
                                             <li><i class="fa-brands fa-x-twitter"></i></li>
                                         </a>
-                                        <a href="#">
+                                        <a href="#" class="hover:text-[#CEB772]">
                                             <li><i class="fa-brands fa-telegram"></i></li>
                                         </a>
                                     </ul>
@@ -204,14 +207,14 @@
         </header>
     </div>
 
-    <div class="bg-black py-12">
+    <div class="bg-black py-12 min-h-1/2" id="skills-section">
         <div class="text-center text-white">
             <span class="border border-[#CEB772] px-4 py-2 rounded-md">Skills</span>
             <h2 class="font-bold text-3xl mt-4">My Special Services</h2>
         </div>
 
         <div class="w-[60vw] mt-5 m-auto" id="skills">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 m-auto">
+            <div class="grid grid-cols-2 gap-10 md:gap-8 lg:grid-cols-4 lg:gap-6 mt-10 m-auto">
                 <div id="skills-card" class="text-white text-center w-36 p-6 rounded-lg bg-[#222222] space-y-3 hover:scale-105">
                     <i class="fa-brands fa-html5 fa-2xl" style="color: #FFD43B;"></i>
                     <h2 class="text-lg font-bold">HTML</h2>
@@ -239,7 +242,7 @@
         </div>
     </div>
 
-    <div class="bg-[#1a1a1a] min-h-[80vh] pt-12">
+    <div class="bg-[#1a1a1a] min-h-[80vh] pt-12" id="projects-section">
         <div class="text-center text-white">
             <span class="border border-[#CEB772] px-4 py-2 rounded-md">Projects</span>
             <h2 class="font-bold text-3xl mt-4">See my projects!</h2>
@@ -252,24 +255,24 @@
         </div>
     </div>
 
-    <footer class="bg-black min-h-[70vh] pt-12 text-white">
-        <div class="w-[70vw] m-auto p-12 text-center border-b-2 border-b-gray-400">
-            <p class="text-slate-300 text-sm mb-6">Need Any Project?</p>
+    <footer class="bg-black min-h-[70vh] pt-12 text-white" id="contact-section">
+        <div class="w-[90%] lg:w-[70vw] m-auto p-12 text-center border-b-2 border-b-gray-400">
+            <p class="text-slate-300 text-xl lg:text-sm mb-6">Need Any Project?</p>
             <h2 class="text-white text-6xl font-bold mb-10">Let's Start</h2>
 
-            <div class="flex justify-around items-center">
-                <a href="" class="underline underline-offset-8 decoration-white text-white text-lg hover:text-gray-200 hover:decoration-gray-200">
+            <div class="flex flex-col lg:flex-row justify-around items-center">
+                <a href="" class="underline underline-offset-8 decoration-white text-white text-lg hover:text-gray-200 hover:decoration-gray-200 mb-6 lg:mb-0 order-1" id="email">
                     <i class="fa-solid fa-envelope"></i>
                     malik.himself0@gmail.com
                 </a>
 
-                <button class="bg-[#CEB772] px-6 py-3 rounded-md hover:bg-[#CEB772] hover:text-black">
+                <button class="bg-[#CEB772] px-6 py-3 rounded-md hover:bg-[#CEB772] hover:text-black mb-6 lg:mb-0 order-3" id="quote-button">
                     <a href="#">
                         Get A Quote
                     </a>
                 </button>
 
-                <a href="" class="underline underline-offset-8 decoration-white text-white text-lg hover:text-gray-200 hover:decoration-gray-200">
+                <a href="" class="underline underline-offset-8 decoration-white text-white text-lg hover:text-gray-200 hover:decoration-gray-200 mb-6 lg:mb-0 order-2" id="phone">
                     <i class="fa-solid fa-phone"></i>
                     +234 903 798 3588
                 </a>
